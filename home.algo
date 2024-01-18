@@ -1,0 +1,77 @@
+ALGORITHM count
+
+ VAR sentence: string;
+VAR length,word,vowel: integer;
+VAR c: char;
+
+BEGIN
+
+   sentence:='';
+   length:=0;
+   word:=0;
+   vowel:=0;
+   repeat
+       read(c);
+       length := length + 1;
+       sentence := sentence + c;
+       if char = ' ' :
+          word := word + 1;
+       else if c in ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']:
+          vowel := vowel + 1;
+       END_IF
+  until char = '.';
+
+ write("Sentence:", sentence);
+ write("Length:", length);
+ write("Words:", word + 1);
+ write("Vowels:", vowel);
+
+END
+
+// The length of the sentence (the number of characters).
+// avec boucle while
+
+ALGORITHM cercule-length
+VAR
+    len: INTEGER;
+    word:STRING;
+     word:=""
+    len:=0;
+    i, j:INTEGER
+    nwords:INTEGER:=0
+    voy:INTEGER:=0
+
+BEGIN
+  i:=1;
+ WHILE (word[i] <> ".") DO
+        i:=i+1
+       len:=i
+ END_WHILE
+ write(len);
+
+ //2eme partie
+
+ FOR j FROM 1 TO len STEP 1  DO
+  IF (word[j]=" ") THEN
+   nwords:= nwords+1;
+  END_IF
+  END_FOR
+ write(nwords);
+
+ //3eme partie
+
+  FOR x FROM 1 TO len STEP 1 DO
+
+  IF (word [x] in [a,A e,E o,O i,I u,U y,Y]) THEN
+
+  voy:=voy+1
+
+  END_IF
+
+  write(voy);
+  END_FOR
+
+
+
+
+END
